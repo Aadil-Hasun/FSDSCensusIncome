@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prediction</title>
+  <style>
+    /* Add some styles to make the form look beautiful */
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    input[type=text] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+    }
+    input[type=submit] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+  </style>
+</head>
+<body>
+
+
+
+
+
+
+  <h1>Enter Custom Data for Prediction</h1>
+  <form action="{{ url_for('predict') }}" method="post">
+    <label for="age">Relative Compactness:</label>
+    <input type="text" id="age" name="age" required>
+
+    <label for="workclass">Select suitable option:</label>
+    <select id="workclass" name="workclass">
+      <option value="State-gov">State Government</option>
+      <option value="Self-emp-not-inc">Self Employed (not INC.)</option>
+      <option value="Self-emp-inc">Self Employed (INC.)</option>
+      <option value="Federal-gov">Federal Government</option>
+      <option value="Local-gov">Local Government</option>
+      <option value="Private">Private</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="fnlwgt">Final Weight:</label>
+    <input type="text" id="fnlwgt" name="fnlwgt" required>
+
+    <label for="education-num">Roof Area:</label>
+    <input type="text" id="education-num" name="education-num" required>
+
+    <label for="marital-status">Marital Status:</label>
+    <select id="marital-status" name="marital-status">
+      <option value="Never-married">Never Married</option>
+      <option value="Married-civ-spouse">Married (civilian spouse)</option>
+      <option value="Divorced">Divorced</option>
+      <option value="Married-spouse-absent">Married (spouse absent)</option>
+      <option value="Separated">Separated</option>
+      <option value="Widowed">Widowed</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="occupation">Occupation:</label>
+    <select id="occupation" name="occupation">
+      <option value="Adm-clerical">Administrative Clerk</option>
+      <option value="Exec-managerial">Executive Manager</option>
+      <option value="Prof-specialty">Professional Speciality</option>
+      <option value="Tech-support">Technical Support</option>
+      <option value="Sales">Sales</option>
+      <option value="Handlers-cleaners">Handlers-cleaners</option>
+      <option value="Transport-moving">Transportation & Material moving</option>
+      <option value="Farming-fishing">Farming and/or Fishing</option>
+      <option value="Craft-repair">Crafting, Repairing</option>
+      <option value="Protective-serv">Protective Service </option>
+      <option value="Machine-op-inspct">Machine Operator/Inspector</option>
+      <option value="Other-serv">Other Services</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="relationship">Relationship:</label>
+    <select id="relationship" name="relationship">
+      <option value="Not-in-family">Not in Family</option>
+      <option value="Husband">Husband</option>
+      <option value="Wife">Wife</option>
+      <option value="Own-child">Own child</option>
+      <option value="Unmarried">Unmarried</option>
+      <option value="Other-relative">Other relative</option>
+    </select>
+
+    <label for="race">Race:</label>
+    <select id="race" name="race">
+      <option value="White">White</option>
+      <option value="Black">Black</option>
+      <option value="Asian-Pac-Islander">Asian Pacific Islander</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="capital-gain">Overall Height:</label>
+    <input type="text" id="capital-gain" name="capital-gain" required>
+
+    <label for="capital-loss">Orientation:</label>
+    <input type="text" id="capital-loss" name="capital-loss" required>
+
+    <label for="hours-per-week">Glazing Area:</label>
+    <input type="text" id="hours-per-week" name="hours-per-week" required>
+
+    <label for="native-country">Country:</label>
+    <select id="native-country" name="native-country">
+      <option value="United-States">United States</option>
+      <option value="Mexico">Mexico</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="Gender">Glazing Area Distribution:</label>
+    <select id="Gender" name="Gender">
+      <option value="1">Male</option>
+      <option value="0">Female</option>
+    </select>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
